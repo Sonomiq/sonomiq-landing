@@ -96,30 +96,21 @@ export function HowItWorks({ title, description, steps }: HowItWorksProps) {
                 </div>
               </div>
               
-              <div className="text-gray-400">→</div>
+              <div className="text-gray-400">+</div>
               
               <div className="bg-white p-4 rounded-lg shadow-sm text-center min-w-[120px]">
-                <div className="text-sm font-medium text-gray-600 mb-2">SONOMIQ</div>
+                <div className="text-sm font-medium text-gray-600 mb-2">SONOMIQ Add-on</div>
                 <div className="w-12 h-12 bg-blue-100 rounded-lg mx-auto flex items-center justify-center">
                   <BarChart3 className="w-6 h-6 text-blue-600" />
                 </div>
               </div>
               
-              <div className="text-gray-400">→</div>
+              <div className="text-gray-400">=</div>
               
               <div className="bg-white p-4 rounded-lg shadow-sm text-center min-w-[120px]">
-                <div className="text-sm font-medium text-gray-600 mb-2">Risk & Suggestions</div>
+                <div className="text-sm font-medium text-gray-600 mb-2">Smart Scheduling</div>
                 <div className="w-12 h-12 bg-yellow-100 rounded-lg mx-auto flex items-center justify-center">
                   <Lightbulb className="w-6 h-6 text-yellow-600" />
-                </div>
-              </div>
-              
-              <div className="text-gray-400">→</div>
-              
-              <div className="bg-white p-4 rounded-lg shadow-sm text-center min-w-[120px]">
-                <div className="text-sm font-medium text-gray-600 mb-2">Back to Scheduler</div>
-                <div className="w-12 h-12 bg-green-100 rounded-lg mx-auto flex items-center justify-center">
-                  <MousePointer className="w-6 h-6 text-green-600" />
                 </div>
               </div>
             </div>
