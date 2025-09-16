@@ -13,10 +13,15 @@ interface ProblemImpactProps {
   }
   forStaff: string[]
   forClinics: string[]
+  costImpact: {
+    amount: string
+    description: string
+    source: string
+  }
   statCallout: string
 }
 
-export function ProblemImpact({ title, description, statistics, forStaff, forClinics, statCallout }: ProblemImpactProps) {
+export function ProblemImpact({ title, description, statistics, forStaff, forClinics, costImpact, statCallout }: ProblemImpactProps) {
   return (
     <section className="py-24 bg-slate-50">
       <div className="container mx-auto px-6">
@@ -113,7 +118,7 @@ export function ProblemImpact({ title, description, statistics, forStaff, forCli
                 </div>
                 <h3 className="text-3xl font-light text-slate-800 tracking-wide">For Clinics</h3>
               </div>
-              <ul className="space-y-6">
+              <ul className="space-y-6 mb-8">
                 {forClinics.map((point, index) => (
                   <li key={index} className="flex items-start">
                     <div className="w-3 h-3 bg-amber-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
@@ -121,6 +126,26 @@ export function ProblemImpact({ title, description, statistics, forStaff, forCli
                   </li>
                 ))}
               </ul>
+              
+              {/* Cost Impact */}
+              <div className="bg-red-50 border border-red-200 rounded-xl p-6">
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-red-600 mb-3">
+                    {costImpact.amount}
+                  </div>
+                  <p className="text-slate-700 font-medium mb-4">
+                    {costImpact.description}
+                  </p>
+                  <a 
+                    href={costImpact.source}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-blue-600 hover:text-blue-800 underline"
+                  >
+                    Source: Journal of Diagnostic Medical Sonography
+                  </a>
+                </div>
+              </div>
             </motion.div>
           </div>
 

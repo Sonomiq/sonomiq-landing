@@ -37,6 +37,7 @@ export default function Home() {
           statistics={content.problem.statistics}
           forStaff={content.problem.forStaff}
           forClinics={content.problem.forClinics}
+          costImpact={content.problem.costImpact}
           statCallout={content.problem.statCallout}
         />
       </div>
