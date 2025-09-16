@@ -4,7 +4,6 @@ import { ProblemImpact } from '@/components/ProblemImpact'
 import { HowItWorks } from '@/components/HowItWorks'
 import { Demo } from '@/components/Demo'
 import { LogoMarquee } from '@/components/aceternity/LogoMarquee'
-import { Spotlight } from '@/components/aceternity/Spotlight'
 import { GradientBorder } from '@/components/aceternity/GradientBorder'
 import { Testimonials } from '@/components/Testimonials'
 import { Marketplaces } from '@/components/Marketplaces'
@@ -28,20 +27,15 @@ export default function Home() {
       
       <LogoMarquee />
 
-      <div className="relative">
-        <Spotlight className="z-0" />
-        <div className="relative z-10">
-          <ProblemImpact
-            title={content.problem.title}
-            description={content.problem.description}
-            statistics={content.problem.statistics}
-            forStaff={content.problem.forStaff}
-            forClinics={content.problem.forClinics}
-            costImpact={content.problem.costImpact}
-            statCallout={content.problem.statCallout}
-          />
-        </div>
-      </div>
+      <ProblemImpact
+        title={content.problem.title}
+        description={content.problem.description}
+        statistics={content.problem.statistics}
+        forStaff={content.problem.forStaff}
+        forClinics={content.problem.forClinics}
+        costImpact={content.problem.costImpact}
+        statCallout={content.problem.statCallout}
+      />
       
       <HowItWorks 
         title={content.howItWorks.title}
