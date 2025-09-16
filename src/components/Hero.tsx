@@ -30,8 +30,9 @@ export function Hero({ title, subhead, primaryCta, secondaryCta, microproof }: H
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/40 via-slate-800/30 to-blue-900/40"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-slate-900/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-slate-800/50 to-blue-900/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-slate-900/40"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
       </div>
       
       <BackgroundBeams />
@@ -43,11 +44,11 @@ export function Hero({ title, subhead, primaryCta, secondaryCta, microproof }: H
             transition={{ duration: 0.8 }}
           >
             
-            <h1 className="text-6xl md:text-8xl font-light text-white mb-8 tracking-tight drop-shadow-lg">
+            <h1 className="text-6xl md:text-8xl font-light text-white mb-8 tracking-tight drop-shadow-2xl" style={{ textShadow: '0 0 20px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.6)' }}>
               {title}
             </h1>
             
-            <p className="text-xl md:text-2xl text-slate-100 mb-12 max-w-4xl mx-auto leading-relaxed font-light drop-shadow-md">
+            <p className="text-xl md:text-2xl text-white mb-12 max-w-4xl mx-auto leading-relaxed font-medium drop-shadow-xl" style={{ textShadow: '0 0 15px rgba(0,0,0,0.8), 0 0 30px rgba(0,0,0,0.6)' }}>
               {subhead}
             </p>
             
@@ -62,10 +63,11 @@ export function Hero({ title, subhead, primaryCta, secondaryCta, microproof }: H
             </div>
             
             <motion.div 
-              className="inline-flex items-center text-sm text-slate-200 font-medium drop-shadow-sm"
+              className="inline-flex items-center text-sm text-white font-medium drop-shadow-lg px-4 py-2 rounded-full bg-black/20 backdrop-blur-sm border border-white/20"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
+              style={{ textShadow: '0 0 10px rgba(0,0,0,0.8)' }}
             >
               <svg className="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
