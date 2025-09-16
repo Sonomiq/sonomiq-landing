@@ -1,0 +1,74 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { motion } from 'framer-motion'
+
+interface HeaderProps {
+  ctaHref: string
+}
+
+export function Header({ ctaHref }: HeaderProps) {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 32)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  return (
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-100' 
+          : 'bg-transparent'
+      }`}
+    >
+      <div className="container mx-auto px-6 py-6">
+        <div className="flex items-center justify-between">
+          <Link href="/" className="text-3xl font-light text-slate-800 tracking-wide">
+            SONOMIQ
+          </Link>
+          
+          <nav className="hidden md:flex items-center space-x-10">
+            <Link 
+              href="#how" 
+              className="text-slate-600 hover:text-slate-800 transition-colors font-medium text-sm tracking-wide"
+            >
+              How it works
+            </Link>
+            <Link 
+              href="#evidence" 
+              className="text-slate-600 hover:text-slate-800 transition-colors font-medium text-sm tracking-wide"
+            >
+              Evidence
+            </Link>
+            <Link 
+              href="#marketplaces" 
+              className="text-slate-600 hover:text-slate-800 transition-colors font-medium text-sm tracking-wide"
+            >
+              Integrations
+            </Link>
+            <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300">
+              <Link href={ctaHref}>Get early access</Link>
+            </Button>
+          </nav>
+
+          {/* Mobile menu button */}
+          <Button variant="ghost" className="md:hidden p-2">
+            <svg className="h-6 w-6 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </Button>
+        </div>
+      </div>
+    </motion.header>
+  )
+}
