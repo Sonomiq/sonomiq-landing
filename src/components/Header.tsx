@@ -33,26 +33,40 @@ export function Header({ ctaHref }: HeaderProps) {
     >
       <div className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-3xl font-light text-slate-800 tracking-wide">
+          <Link href="/" className={`text-3xl font-light tracking-wide transition-colors ${
+            isScrolled ? 'text-slate-800' : 'text-white'
+          }`}>
             SONOMIQ
           </Link>
           
           <nav className="hidden md:flex items-center space-x-10">
             <Link 
               href="#how" 
-              className="text-slate-600 hover:text-slate-800 transition-colors font-medium text-sm tracking-wide"
+              className={`transition-colors font-medium text-sm tracking-wide ${
+                isScrolled 
+                  ? 'text-slate-600 hover:text-slate-800' 
+                  : 'text-white/90 hover:text-white'
+              }`}
             >
               How it works
             </Link>
             <Link 
               href="#evidence" 
-              className="text-slate-600 hover:text-slate-800 transition-colors font-medium text-sm tracking-wide"
+              className={`transition-colors font-medium text-sm tracking-wide ${
+                isScrolled 
+                  ? 'text-slate-600 hover:text-slate-800' 
+                  : 'text-white/90 hover:text-white'
+              }`}
             >
               Evidence
             </Link>
             <Link 
               href="#marketplaces" 
-              className="text-slate-600 hover:text-slate-800 transition-colors font-medium text-sm tracking-wide"
+              className={`transition-colors font-medium text-sm tracking-wide ${
+                isScrolled 
+                  ? 'text-slate-600 hover:text-slate-800' 
+                  : 'text-white/90 hover:text-white'
+              }`}
             >
               Integrations
             </Link>
@@ -63,7 +77,9 @@ export function Header({ ctaHref }: HeaderProps) {
 
           {/* Mobile menu button */}
           <Button variant="ghost" className="md:hidden p-2">
-            <svg className="h-6 w-6 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className={`h-6 w-6 transition-colors ${
+              isScrolled ? 'text-slate-600' : 'text-white'
+            }`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </Button>
