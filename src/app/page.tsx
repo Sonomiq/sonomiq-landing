@@ -48,10 +48,6 @@ export default function Home() {
         steps={content.howItWorks.steps} 
       />
 
-      <div className="text-center my-12">
-        <ShimmerButton href="#lead">Get early access</ShimmerButton>
-      </div>
-
       <Demo />
 
       <Testimonials />
