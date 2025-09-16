@@ -54,12 +54,8 @@ export function Hero({ title, subhead, primaryCta, secondaryCta, microproof }: H
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
               <ShimmerButton href={primaryCta.href}>{primaryCta.label}</ShimmerButton>
-              <Button asChild variant="outline" size="lg" className="text-lg px-10 py-4 border-2 border-white/30 text-white hover:bg-white/10 rounded-full font-medium transition-all duration-300 backdrop-blur-sm">
-                <Link href={secondaryCta.href}>{secondaryCta.label}</Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="text-lg px-10 py-4 border-2 border-blue-300/50 text-blue-100 hover:bg-blue-500/20 rounded-full font-medium transition-all duration-300 backdrop-blur-sm">
-                <Link href="#demo">Watch demo</Link>
-              </Button>
+              <ShimmerButton href={secondaryCta.href}>{secondaryCta.label}</ShimmerButton>
+              <ShimmerButton href="#demo">Watch demo</ShimmerButton>
             </div>
             
             <motion.div 
