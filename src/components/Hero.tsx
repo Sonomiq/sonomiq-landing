@@ -30,9 +30,9 @@ export function Hero({ title, subhead, primaryCta, secondaryCta, microproof }: H
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-slate-800/50 to-blue-900/60"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-slate-900/40"></div>
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/15 via-slate-800/10 to-blue-900/15"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-slate-900/10"></div>
+        <div className="absolute inset-0 bg-black/5"></div>
       </div>
       
       <BackgroundBeams />
