@@ -41,43 +41,6 @@ export function ProblemImpact({ title, description, statistics, forStaff, forCli
             </p>
           </motion.div>
 
-          {/* Statistics */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 mb-16"
-          >
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-red-600 mb-4">
-                  90%
-                </div>
-                <p className="text-lg text-slate-700 font-medium mb-2">
-                  {statistics.primary}
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-red-600 mb-4">
-                  20%
-                </div>
-                <p className="text-lg text-slate-700 font-medium mb-2">
-                  {statistics.secondary}
-                </p>
-              </div>
-            </div>
-            <div className="text-center mt-6">
-              <a 
-                href={statistics.source}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-blue-600 hover:text-blue-800 underline"
-              >
-                Source: Sonographer Safety Workplace Considerations Report
-              </a>
-            </div>
-          </motion.div>
 
           {/* Problem Sections Side by Side */}
           <div className="grid lg:grid-cols-2 gap-12 mb-20">
@@ -99,7 +62,7 @@ export function ProblemImpact({ title, description, statistics, forStaff, forCli
                 </p>
               </div>
               
-              <ul className="space-y-4">
+              <ul className="space-y-4 mb-6">
                 {forStaff.map((point, index) => (
                   <li key={index} className="flex items-start">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -107,6 +70,38 @@ export function ProblemImpact({ title, description, statistics, forStaff, forCli
                   </li>
                 ))}
               </ul>
+              
+              {/* Statistics */}
+              <div className="bg-red-50 border border-red-200 rounded-xl p-4">
+                <div className="grid grid-cols-2 gap-4 mb-3">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-red-600 mb-1">
+                      90%
+                    </div>
+                    <p className="text-slate-700 text-xs">
+                      {statistics.primary}
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-red-600 mb-1">
+                      20%
+                    </div>
+                    <p className="text-slate-700 text-xs">
+                      {statistics.secondary}
+                    </p>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <a 
+                    href={statistics.source}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-blue-600 hover:text-blue-800 underline"
+                  >
+                    Source: Sonographer Safety Workplace Considerations Report
+                  </a>
+                </div>
+              </div>
             </motion.div>
 
             {/* For Clinics */}
