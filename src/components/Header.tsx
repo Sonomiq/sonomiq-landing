@@ -33,7 +33,7 @@ export function Header({ ctaHref }: HeaderProps) {
     >
       <div className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
-          <Link href="/" className={`text-3xl font-light tracking-wide transition-colors ${
+          <Link href="/" className={`text-4xl font-light tracking-wide transition-colors ${
             isScrolled ? 'text-slate-800' : 'text-white'
           }`}>
             SONOMIQ
@@ -42,7 +42,7 @@ export function Header({ ctaHref }: HeaderProps) {
           <nav className="hidden md:flex items-center space-x-10">
             <Link 
               href="#how" 
-              className={`transition-colors font-medium text-sm tracking-wide ${
+              className={`transition-colors font-medium text-base tracking-wide ${
                 isScrolled 
                   ? 'text-slate-600 hover:text-slate-800' 
                   : 'text-white/90 hover:text-white'
@@ -52,7 +52,7 @@ export function Header({ ctaHref }: HeaderProps) {
             </Link>
             <Link 
               href="#evidence" 
-              className={`transition-colors font-medium text-sm tracking-wide ${
+              className={`transition-colors font-medium text-base tracking-wide ${
                 isScrolled 
                   ? 'text-slate-600 hover:text-slate-800' 
                   : 'text-white/90 hover:text-white'
@@ -62,7 +62,7 @@ export function Header({ ctaHref }: HeaderProps) {
             </Link>
             <Link 
               href="#marketplaces" 
-              className={`transition-colors font-medium text-sm tracking-wide ${
+              className={`transition-colors font-medium text-base tracking-wide ${
                 isScrolled 
                   ? 'text-slate-600 hover:text-slate-800' 
                   : 'text-white/90 hover:text-white'
@@ -70,7 +70,7 @@ export function Header({ ctaHref }: HeaderProps) {
             >
               Integrations
             </Link>
-            <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300">
+            <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-medium text-base shadow-lg hover:shadow-xl transition-all duration-300">
               <Link href={ctaHref}>Get early access</Link>
             </Button>
           </nav>
