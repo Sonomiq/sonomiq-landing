@@ -16,27 +16,26 @@ interface HeroProps {
 
 export function Hero({ title, subhead, primaryCta, secondaryCta, microproof }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Video Background */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="hero-video-container">
         <video
           autoPlay
           muted
           loop
           playsInline
           controls={false}
-          className="w-full h-full object-cover"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-slate-800/50 to-blue-900/60"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-slate-900/40"></div>
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-slate-800/50 to-blue-900/60 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-slate-900/40 z-10"></div>
+        <div className="absolute inset-0 bg-black/20 z-10"></div>
       </div>
       
       <BackgroundBeams />
-      <div className="container mx-auto px-6 py-24 relative z-10">
+      <div className="container mx-auto px-6 relative z-20">
         <div className="max-w-5xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
