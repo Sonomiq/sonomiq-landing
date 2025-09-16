@@ -82,7 +82,7 @@ export function BackgroundBeams() {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
       <canvas ref={canvasRef} className="h-full w-full opacity-50" />
-      <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-transparent to-white/70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-white/10" />
     </div>
   )
 }
