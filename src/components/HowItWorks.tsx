@@ -96,7 +96,7 @@ export function HowItWorks({ title, description, steps }: HowItWorksProps) {
                 </div>
               </div>
               
-              <div className="text-gray-400">+</div>
+              <div className="text-gray-400 text-2xl">→</div>
               
               <div className="bg-white p-4 rounded-lg shadow-sm text-center min-w-[120px]">
                 <div className="text-sm font-medium text-gray-600 mb-2">SONOMIQ Add-on</div>
@@ -105,7 +105,7 @@ export function HowItWorks({ title, description, steps }: HowItWorksProps) {
                 </div>
               </div>
               
-              <div className="text-gray-400">=</div>
+              <div className="text-gray-400 text-2xl">→</div>
               
               <div className="bg-white p-4 rounded-lg shadow-sm text-center min-w-[120px]">
                 <div className="text-sm font-medium text-gray-600 mb-2">Smart Scheduling</div>
