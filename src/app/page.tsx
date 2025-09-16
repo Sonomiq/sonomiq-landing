@@ -29,16 +29,18 @@ export default function Home() {
       <LogoMarquee />
 
       <div className="relative">
-        <Spotlight />
-        <ProblemImpact
-          title={content.problem.title}
-          description={content.problem.description}
-          statistics={content.problem.statistics}
-          forStaff={content.problem.forStaff}
-          forClinics={content.problem.forClinics}
-          costImpact={content.problem.costImpact}
-          statCallout={content.problem.statCallout}
-        />
+        <Spotlight className="z-0" />
+        <div className="relative z-10">
+          <ProblemImpact
+            title={content.problem.title}
+            description={content.problem.description}
+            statistics={content.problem.statistics}
+            forStaff={content.problem.forStaff}
+            forClinics={content.problem.forClinics}
+            costImpact={content.problem.costImpact}
+            statCallout={content.problem.statCallout}
+          />
+        </div>
       </div>
       
       <HowItWorks 
