@@ -93,4 +93,4 @@ export const content = {
       { label: 'Status', href: 'https://status.sonomiq.example' }
     ]
   }
-} as const;
+};

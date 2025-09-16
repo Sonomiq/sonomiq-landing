@@ -16,7 +16,7 @@ interface HeroProps {
 
 export function Hero({ title, subhead, primaryCta, secondaryCta, microproof }: HeroProps) {
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full">
         <video
@@ -26,14 +26,6 @@ export function Hero({ title, subhead, primaryCta, secondaryCta, microproof }: H
           playsInline
           controls={false}
           className="w-full h-full object-cover"
-          style={{ 
-            objectFit: 'cover',
-            width: '100%',
-            height: '100%',
-            position: 'absolute',
-            top: 0,
-            left: 0
-          }}
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
@@ -44,7 +36,7 @@ export function Hero({ title, subhead, primaryCta, secondaryCta, microproof }: H
       </div>
       
       <BackgroundBeams />
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 py-24 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
