@@ -11,6 +11,11 @@ export const content = {
   problem: {
     title: 'The Problem',
     description: 'Medical imaging work is physically demanding, and poor scheduling practices compound WRMSD risk.',
+    statistics: {
+      primary: '90% of clinical sonographers experience symptoms of WRMSDs*',
+      secondary: '20% of sonographers who were symptomatic suffered career-ending injuries*',
+      source: 'https://fbe.com.au/Sonographer/Reports/Sonographer%20Safety%20Workplace%20Considerations.pdf'
+    },
     forStaff: [
       'Repetitive, posture-intensive imaging procedures',
       'Consecutive high-strain cases increase injury risk',

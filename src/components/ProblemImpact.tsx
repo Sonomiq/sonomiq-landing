@@ -6,12 +6,17 @@ import { AlertCircle, Users, TrendingDown } from 'lucide-react'
 interface ProblemImpactProps {
   title: string
   description: string
+  statistics: {
+    primary: string
+    secondary: string
+    source: string
+  }
   forStaff: string[]
   forClinics: string[]
   statCallout: string
 }
 
-export function ProblemImpact({ title, description, forStaff, forClinics, statCallout }: ProblemImpactProps) {
+export function ProblemImpact({ title, description, statistics, forStaff, forClinics, statCallout }: ProblemImpactProps) {
   return (
     <section className="py-24 bg-slate-50">
       <div className="container mx-auto px-6">
@@ -26,9 +31,47 @@ export function ProblemImpact({ title, description, forStaff, forClinics, statCa
             <h2 className="text-5xl md:text-6xl font-light text-slate-800 mb-8 tracking-tight">
               {title}
             </h2>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto font-light leading-relaxed">
+            <p className="text-xl text-slate-600 max-w-4xl mx-auto font-light leading-relaxed mb-12">
               {description}
             </p>
+            
+            {/* Statistics */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 mb-16"
+            >
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold text-red-600 mb-4">
+                    90%
+                  </div>
+                  <p className="text-lg text-slate-700 font-medium mb-2">
+                    {statistics.primary}
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold text-red-600 mb-4">
+                    20%
+                  </div>
+                  <p className="text-lg text-slate-700 font-medium mb-2">
+                    {statistics.secondary}
+                  </p>
+                </div>
+              </div>
+              <div className="text-center mt-6">
+                <a 
+                  href={statistics.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-blue-600 hover:text-blue-800 underline"
+                >
+                  Source: Sonographer Safety Workplace Considerations Report
+                </a>
+              </div>
+            </motion.div>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12 mb-20">

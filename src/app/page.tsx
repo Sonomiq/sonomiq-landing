@@ -34,6 +34,7 @@ export default function Home() {
         <ProblemImpact
           title={content.problem.title}
           description={content.problem.description}
+          statistics={content.problem.statistics}
           forStaff={content.problem.forStaff}
           forClinics={content.problem.forClinics}
           statCallout={content.problem.statCallout}
