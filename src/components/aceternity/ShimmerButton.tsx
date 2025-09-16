@@ -9,8 +9,8 @@ export function ShimmerButton({ href, children, className = "" }: { href: string
       href={href}
       className={`relative inline-flex items-center justify-center rounded-full px-8 py-3 text-white font-medium transition-transform duration-300 hover:scale-[1.02] ${className}`}
     >
-      <span className="absolute inset-0 rounded-full bg-blue-600" />
-      <span className="absolute -inset-px rounded-full blur-lg bg-blue-600/30" />
+      <span className="absolute inset-0 rounded-full bg-blue-600/80" />
+      <span className="absolute -inset-px rounded-full blur-lg bg-blue-600/20" />
       <span className="relative">{children}</span>
     </Link>
   )
