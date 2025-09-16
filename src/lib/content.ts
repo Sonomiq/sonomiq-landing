@@ -27,7 +27,7 @@ export const content = {
       'Unpredictable capacity due to staff injuries'
     ],
     costImpact: {
-      amount: '$700,000+ USD',
+      amount: 'up to $700,000+ USD',
       description: 'per sonographer injury when factoring in direct costs for managing the injury along with indirect costs due to lost productivity or hiring of replacement staff',
       source: 'https://journals.sagepub.com/doi/pdf/10.1177/8756479320907370'
     },
