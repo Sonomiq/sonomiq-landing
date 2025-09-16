@@ -36,128 +36,127 @@ export function ProblemImpact({ title, description, statistics, forStaff, forCli
             <h2 className="text-5xl md:text-6xl font-light text-slate-800 mb-8 tracking-tight">
               {title}
             </h2>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto font-light leading-relaxed mb-12">
+            <p className="text-xl text-slate-600 max-w-4xl mx-auto font-light leading-relaxed mb-16">
               {description}
             </p>
-            
-            {/* Statistics */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 mb-16"
-            >
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-red-600 mb-4">
-                    90%
-                  </div>
-                  <p className="text-lg text-slate-700 font-medium mb-2">
-                    {statistics.primary}
-                  </p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-red-600 mb-4">
-                    20%
-                  </div>
-                  <p className="text-lg text-slate-700 font-medium mb-2">
-                    {statistics.secondary}
-                  </p>
-                </div>
-              </div>
-              <div className="text-center mt-6">
-                <a 
-                  href={statistics.source}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-blue-600 hover:text-blue-800 underline"
-                >
-                  Source: Sonographer Safety Workplace Considerations Report
-                </a>
-              </div>
-            </motion.div>
           </motion.div>
 
-          {/* For Imaging Staff */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="mb-20"
-          >
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-red-50 rounded-2xl mb-6">
-                <AlertCircle className="w-10 h-10 text-red-500" />
-              </div>
-              <h3 className="text-4xl font-light text-slate-800 tracking-wide mb-4">For Imaging Staff</h3>
-              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                Sonographers face significant physical risks that impact their health and career longevity.
-              </p>
-            </div>
-            
-            <div className="bg-white p-10 rounded-2xl shadow-lg border border-slate-100 max-w-4xl mx-auto">
-              <ul className="space-y-6">
-                {forStaff.map((point, index) => (
-                  <li key={index} className="flex items-start">
-                    <div className="w-3 h-3 bg-red-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                    <span className="text-slate-600 text-lg leading-relaxed">{point}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </motion.div>
-
-          {/* For Clinics */}
+          {/* Statistics */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="mb-20"
+            className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 mb-16"
           >
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-amber-50 rounded-2xl mb-6">
-                <Users className="w-10 h-10 text-amber-500" />
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-red-600 mb-4">
+                  90%
+                </div>
+                <p className="text-lg text-slate-700 font-medium mb-2">
+                  {statistics.primary}
+                </p>
               </div>
-              <h3 className="text-4xl font-light text-slate-800 tracking-wide mb-4">For Clinics</h3>
-              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                Healthcare facilities bear substantial financial and operational costs from sonographer injuries.
-              </p>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-red-600 mb-4">
+                  20%
+                </div>
+                <p className="text-lg text-slate-700 font-medium mb-2">
+                  {statistics.secondary}
+                </p>
+              </div>
             </div>
-            
-            <div className="bg-white p-10 rounded-2xl shadow-lg border border-slate-100 max-w-4xl mx-auto mb-8">
-              <ul className="space-y-6">
-                {forClinics.map((point, index) => (
+            <div className="text-center mt-6">
+              <a 
+                href={statistics.source}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-blue-600 hover:text-blue-800 underline"
+              >
+                Source: Sonographer Safety Workplace Considerations Report
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Problem Sections Side by Side */}
+          <div className="grid lg:grid-cols-2 gap-12 mb-20">
+            {/* For Imaging Staff */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="bg-white p-10 rounded-2xl shadow-lg border border-slate-100"
+            >
+              <div className="text-center mb-8">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-red-50 rounded-2xl mb-4">
+                  <AlertCircle className="w-8 h-8 text-red-500" />
+                </div>
+                <h3 className="text-3xl font-light text-slate-800 tracking-wide mb-3">For Imaging Staff</h3>
+                <p className="text-slate-600 text-sm">
+                  Sonographers face significant physical risks that impact their health and career longevity.
+                </p>
+              </div>
+              
+              <ul className="space-y-4">
+                {forStaff.map((point, index) => (
                   <li key={index} className="flex items-start">
-                    <div className="w-3 h-3 bg-amber-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                    <span className="text-slate-600 text-lg leading-relaxed">{point}</span>
+                    <div className="w-2 h-2 bg-red-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-slate-600 text-sm leading-relaxed">{point}</span>
                   </li>
                 ))}
               </ul>
-            </div>
-            
-            {/* Cost Impact */}
-            <div className="bg-red-50 border border-red-200 rounded-xl p-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-red-600 mb-4">
-                  {costImpact.amount}
+            </motion.div>
+
+            {/* For Clinics */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="bg-white p-10 rounded-2xl shadow-lg border border-slate-100"
+            >
+              <div className="text-center mb-8">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-50 rounded-2xl mb-4">
+                  <Users className="w-8 h-8 text-amber-500" />
                 </div>
-                <p className="text-slate-700 font-medium mb-6 text-lg">
-                  {costImpact.description}
+                <h3 className="text-3xl font-light text-slate-800 tracking-wide mb-3">For Clinics</h3>
+                <p className="text-slate-600 text-sm">
+                  Healthcare facilities bear substantial financial and operational costs from sonographer injuries.
                 </p>
-                <a 
-                  href={costImpact.source}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-blue-600 hover:text-blue-800 underline"
-                >
-                  Source: Journal of Diagnostic Medical Sonography
-                </a>
               </div>
-            </div>
-          </motion.div>
+              
+              <ul className="space-y-4 mb-6">
+                {forClinics.map((point, index) => (
+                  <li key={index} className="flex items-start">
+                    <div className="w-2 h-2 bg-amber-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-slate-600 text-sm leading-relaxed">{point}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              {/* Cost Impact */}
+              <div className="bg-red-50 border border-red-200 rounded-xl p-4">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-red-600 mb-2">
+                    {costImpact.amount}
+                  </div>
+                  <p className="text-slate-700 text-xs mb-3">
+                    {costImpact.description}
+                  </p>
+                  <a 
+                    href={costImpact.source}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-blue-600 hover:text-blue-800 underline"
+                  >
+                    Source: Journal of Diagnostic Medical Sonography
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          </div>
 
           {/* Stat Callout */}
           <motion.div
