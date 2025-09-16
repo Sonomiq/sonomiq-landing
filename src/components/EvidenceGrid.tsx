@@ -8,19 +8,22 @@ import {
   Shield, 
   AlertTriangle 
 } from 'lucide-react'
+import type React from 'react'
 import { BentoGrid, BentoCard } from '@/components/aceternity/BentoGrid'
 
 interface EvidenceGridProps {
   items: { title: string; text: string }[]
 }
 
-const iconMap = {
+type IconComp = React.ComponentType<{ className?: string }>
+
+const iconMap: Record<string, IconComp> = {
   'Rotate tasks (case mix)': RotateCcw,
   'Insert micro-breaks': Clock,
   'Spread complex cases': Users,
   'Cap high-strain scans': Shield,
   'Flag high-risk slots': AlertTriangle,
-} as const
+}
 
 export function EvidenceGrid({ items }: EvidenceGridProps) {
   return (
@@ -44,7 +47,7 @@ export function EvidenceGrid({ items }: EvidenceGridProps) {
 
           <BentoGrid>
             {items.map((item, index) => {
-              const Icon = (iconMap as Record<string, any>)[item.title] ?? Shield
+              const Icon: IconComp = iconMap[item.title] ?? Shield
               return (
                 <motion.div
                   key={item.title}

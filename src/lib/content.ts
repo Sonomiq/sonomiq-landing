@@ -9,7 +9,7 @@ export const content = {
     microproof: 'Rotate. Recover. Distribute. Cap. Flag—inside your existing schedule.'
   },
   whatWeDo: {
-    intro: 'SONOMIQ PTY LTD analyzes your day’s imaging bookings and advises the scheduler you already use with evidence-based roster rules.',
+    intro: 'SONOMIQ PTY LTD is an add-on that integrates with your existing medical imaging scheduler to provide intelligent WRMSD risk optimization—without changing how you book appointments.',
     bullets: [
       'Rotate tasks (case mix)',
       'Insert micro-breaks',
@@ -31,11 +31,11 @@ export const content = {
     statCallout: 'Lower WRMSD risk. Protected staff. Stable capacity.'
   },
   howItWorks: [
-    { title: 'Data in', text: 'Scheduler sends imaging exam codes, durations, staff, rooms.' },
-    { title: 'Analysis', text: 'SONOMIQ scores WRMSD risk and exposure per person.' },
-    { title: 'Optimization', text: 'Rotations, micro-breaks, distribution, caps, and risk flags.' },
-    { title: 'Apply', text: 'One click inside your existing scheduler.' },
-    { title: 'Audit', text: 'Every change and override is logged.' }
+    { title: 'Connect', text: 'SONOMIQ integrates with your existing scheduler via API—no disruption to current workflows.' },
+    { title: 'Analyze', text: 'Our add-on analyzes your imaging schedules and scores WRMSD risk for each staff member.' },
+    { title: 'Suggest', text: 'Get real-time optimization suggestions: rotations, micro-breaks, distribution, caps, and risk flags.' },
+    { title: 'Apply', text: 'Review and apply suggestions with one click—all within your familiar scheduling interface.' },
+    { title: 'Track', text: 'Every optimization and override is logged for compliance and continuous improvement.' }
   ],
   evidence: [
     { title: 'Rotate tasks (case mix)', text: 'Balance high‑risk with lower‑risk procedures to reduce repetitive strain.' },
@@ -60,7 +60,7 @@ export const content = {
     { q: 'Can we tune the rules?', a: 'Yes. Exposure limits, recovery periods, and rotation preferences are configurable by site.' }
   ],
   cta: {
-    title: 'Optimize your imaging schedules without changing your tools.',
+    title: 'Add intelligent scheduling optimization to your existing system.',
     primary: { label: 'Request early access', href: '#lead' },
     secondary: { label: 'Platform compatibility', href: '#marketplaces' }
   },

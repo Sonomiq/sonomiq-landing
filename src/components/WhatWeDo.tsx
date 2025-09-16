@@ -1,30 +1,30 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Badge } from '@/components/ui/badge'
 import { 
   Shield, 
   Clock, 
   Users, 
   AlertTriangle, 
-  Bell, 
   Zap,
   RotateCcw
 } from 'lucide-react'
+import type React from 'react'
 
 interface WhatWeDoProps {
   intro: string
   bullets: string[]
 }
 
-const iconMap = {
+type IconComp = React.ComponentType<{ className?: string }>
+const iconMap: Record<string, IconComp> = {
   'Rotate tasks (case mix)': RotateCcw,
   'Insert micro-breaks': Clock,
   'Spread complex cases': Users,
   'Cap high-strain scans': Shield,
   'Flag high-risk slots': AlertTriangle,
   'API-first integration': Zap,
-} as const
+}
 
 export function WhatWeDo({ intro, bullets }: WhatWeDoProps) {
   return (
@@ -48,7 +48,7 @@ export function WhatWeDo({ intro, bullets }: WhatWeDoProps) {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {bullets.map((bullet, index) => {
-              const Icon = (iconMap as Record<string, any>)[bullet] ?? Shield
+              const Icon: IconComp = iconMap[bullet] ?? Shield
               return (
                 <motion.div
                   key={bullet}
