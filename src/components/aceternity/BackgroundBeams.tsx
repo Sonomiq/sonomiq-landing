@@ -8,6 +8,12 @@ export function BackgroundBeams() {
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
+    
+    // Check for reduced motion preference
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return
+    }
+    
     const ctx = canvas.getContext("2d")!
 
     let animationFrameId = 0
@@ -20,17 +26,27 @@ export function BackgroundBeams() {
     }
     window.addEventListener("resize", handleResize)
 
-    const beams = Array.from({ length: 6 }).map((_, i) => ({
+    const beams = Array.from({ length: 3 }).map((_, i) => ({
       x: Math.random() * width,
       y: Math.random() * height,
       angle: Math.random() * Math.PI * 2,
-      speed: 0.2 + Math.random() * 0.4,
-      width: 200 + Math.random() * 200,
+      speed: 0.1 + Math.random() * 0.2,
+      width: 150 + Math.random() * 100,
       hue: 210 + i * 2,
-      alpha: 0.05 + Math.random() * 0.08,
+      alpha: 0.03 + Math.random() * 0.05,
     }))
 
-    const draw = () => {
+    let lastTime = 0
+    const targetFPS = 30
+    const frameInterval = 1000 / targetFPS
+
+    const draw = (currentTime: number) => {
+      if (currentTime - lastTime < frameInterval) {
+        animationFrameId = requestAnimationFrame(draw)
+        return
+      }
+      
+      lastTime = currentTime
       ctx.clearRect(0, 0, width, height)
       ctx.globalCompositeOperation = "lighter"
 
