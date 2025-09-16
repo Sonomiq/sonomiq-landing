@@ -24,6 +24,7 @@ export function Hero({ title, subhead, primaryCta, secondaryCta, microproof }: H
           muted
           loop
           playsInline
+          controls={false}
           className="w-full h-full object-cover"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
