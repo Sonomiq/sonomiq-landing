@@ -8,17 +8,20 @@ import {
   MousePointer, 
   FileText 
 } from 'lucide-react'
+import type React from 'react'
 
 interface HowItWorksProps {
   steps: { title: string; text: string }[]
 }
 
-const iconMap = {
-  'Data in': Database,
-  'Analysis': BarChart3,
-  'Optimization': Lightbulb,
+type IconComp = React.ComponentType<{ className?: string }>
+
+const iconMap: Record<string, IconComp> = {
+  'Connect': Database,
+  'Analyze': BarChart3,
+  'Suggest': Lightbulb,
   'Apply': MousePointer,
-  'Audit': FileText,
+  'Track': FileText,
 }
 
 export function HowItWorks({ steps }: HowItWorksProps) {
@@ -47,7 +50,7 @@ export function HowItWorks({ steps }: HowItWorksProps) {
             
             <div className="grid lg:grid-cols-5 gap-8 relative z-10">
               {steps.map((step, index) => {
-                const Icon = iconMap[step.title as keyof typeof iconMap]
+                const Icon: IconComp = iconMap[step.title] ?? Database
                 return (
                   <motion.div
                     key={step.title}
