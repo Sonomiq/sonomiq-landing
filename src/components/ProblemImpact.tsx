@@ -153,20 +153,6 @@ export function ProblemImpact({ title, description, statistics, forStaff, forCli
             </motion.div>
           </div>
 
-          {/* Stat Callout */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center bg-gradient-to-r from-blue-600 to-blue-700 text-white p-12 rounded-2xl shadow-2xl"
-          >
-            <div className="flex items-center justify-center mb-6">
-              <TrendingDown className="w-10 h-10 mr-4" />
-              <h3 className="text-3xl font-light tracking-wide">The Solution</h3>
-            </div>
-            <p className="text-2xl font-light max-w-3xl mx-auto leading-relaxed">{statCallout}</p>
-          </motion.div>
         </div>
       </div>
     </section>
