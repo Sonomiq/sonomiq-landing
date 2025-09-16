@@ -2,48 +2,58 @@ export type MarketplaceStatus = 'comingSoon' | 'available' | 'underReview';
 
 export const content = {
   hero: {
-    title: 'Evidence-based scheduling for imaging teams.',
-    subhead: 'SONOMIQ PTY LTD is an add-on to medical imaging schedulers that bakes evidence-based rules into rosters: rotate tasks, insert micro-breaks, spread complex cases, cap high-strain scans, and flag high-risk slots—lowering WRMSD risk, protecting sonographers, and stabilizing clinic capacity.',
+    title: 'Smart scheduling for medical imaging.',
+    subhead: 'SONOMIQ optimizes your existing scheduler to minimize WRMSD risk—without changing how you book.',
     primaryCta: { label: 'Get early access', href: '#lead' },
     secondaryCta: { label: 'See how it works', href: '#how' },
-    microproof: 'Rotate. Recover. Distribute. Cap. Flag—inside your existing schedule.'
-  },
-  whatWeDo: {
-    intro: 'SONOMIQ PTY LTD is an add-on that integrates with your existing medical imaging scheduler to provide intelligent WRMSD risk optimization—without changing how you book appointments.',
-    bullets: [
-      'Rotate tasks (case mix)',
-      'Insert micro-breaks',
-      'Spread complex cases',
-      'Cap high-strain scans',
-      'Flag high-risk slots',
-      'API-first integration'
-    ]
+    microproof: 'Evidence-based scheduling optimization, built for medical imaging.'
   },
   problem: {
-    forSonographers: [
+    title: 'The Problem',
+    description: 'Medical imaging work is physically demanding, and poor scheduling practices compound WRMSD risk.',
+    forStaff: [
       'Repetitive, posture-intensive imaging procedures',
-      'Consecutive high‑strain cases increase WRMSD risk'
+      'Consecutive high-strain cases increase injury risk',
+      'No systematic approach to workload distribution'
     ],
     forClinics: [
-      'Lost-time shifts and backfill costs',
-      'Injury claims, turnover, and training overhead'
+      'Lost-time shifts and expensive backfill costs',
+      'Injury claims, staff turnover, and training overhead',
+      'Unpredictable capacity due to staff injuries'
     ],
     statCallout: 'Lower WRMSD risk. Protected staff. Stable capacity.'
   },
-  howItWorks: [
-    { title: 'Connect', text: 'SONOMIQ integrates with your existing scheduler via API—no disruption to current workflows.' },
-    { title: 'Analyze', text: 'Our add-on analyzes your imaging schedules and scores WRMSD risk for each staff member.' },
-    { title: 'Suggest', text: 'Get real-time optimization suggestions: rotations, micro-breaks, distribution, caps, and risk flags.' },
-    { title: 'Apply', text: 'Review and apply suggestions with one click—all within your familiar scheduling interface.' },
-    { title: 'Track', text: 'Every optimization and override is logged for compliance and continuous improvement.' }
-  ],
-  evidence: [
-    { title: 'Rotate tasks (case mix)', text: 'Balance high‑risk with lower‑risk procedures to reduce repetitive strain.' },
-    { title: 'Insert micro-breaks', text: 'Add short recovery periods after demanding or prolonged scans.' },
-    { title: 'Spread complex cases', text: 'Distribute complex imaging across available staff.' },
-    { title: 'Cap high-strain scans', text: 'Set limits per shift/day/week to prevent peak exposure.' },
-    { title: 'Flag high-risk slots', text: 'Risk chips and preparation prompts before high‑risk lists.' }
-  ],
+  howItWorks: {
+    title: 'How We Work',
+    description: 'SONOMIQ integrates seamlessly with your existing scheduler to provide intelligent WRMSD risk optimization.',
+    steps: [
+      { 
+        title: 'Connect', 
+        text: 'SONOMIQ integrates with your existing scheduler via API—no disruption to current workflows.',
+        detail: 'One-time setup connects to your current scheduling system through secure API integration.'
+      },
+      { 
+        title: 'Analyze', 
+        text: 'Our add-on analyzes your imaging schedules and scores WRMSD risk for each staff member.',
+        detail: 'Real-time analysis of exam types, durations, and staff assignments to identify high-risk patterns.'
+      },
+      { 
+        title: 'Suggest', 
+        text: 'Get real-time optimization suggestions: rotations, micro-breaks, distribution, caps, and risk flags.',
+        detail: 'Intelligent recommendations for task rotation, recovery periods, workload distribution, and exposure limits.'
+      },
+      { 
+        title: 'Apply', 
+        text: 'Review and apply suggestions with one click—all within your familiar scheduling interface.',
+        detail: 'Seamless integration means suggestions appear directly in your existing scheduler workflow.'
+      },
+      { 
+        title: 'Track', 
+        text: 'Every optimization and override is logged for compliance and continuous improvement.',
+        detail: 'Complete audit trail for regulatory compliance and ongoing optimization of scheduling rules.'
+      }
+    ]
+  },
   marketplaces: [
     { name: 'ADP Marketplace', blurb: 'HR/payroll/time & scheduling ecosystem.', status: 'comingSoon' as MarketplaceStatus, linkLabel: 'ADP Marketplace' },
     { name: 'UKG Marketplace (Kronos + Ultimate)', blurb: 'Large WFM ecosystem in healthcare.', status: 'comingSoon' as MarketplaceStatus, linkLabel: 'UKG Marketplace' },

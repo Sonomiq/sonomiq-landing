@@ -1,9 +1,7 @@
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
-import { WhatWeDo } from '@/components/WhatWeDo'
 import { ProblemImpact } from '@/components/ProblemImpact'
 import { HowItWorks } from '@/components/HowItWorks'
-import { EvidenceGrid } from '@/components/EvidenceGrid'
 import { Demo } from '@/components/Demo'
 import { LogoMarquee } from '@/components/aceternity/LogoMarquee'
 import { Spotlight } from '@/components/aceternity/Spotlight'
@@ -29,25 +27,24 @@ export default function Home() {
         microproof={content.hero.microproof}
       />
       
-      <WhatWeDo
-        intro={content.whatWeDo.intro}
-        bullets={content.whatWeDo.bullets}
-      />
-      
       <LogoMarquee />
 
       <div className="relative">
         <Spotlight />
         <ProblemImpact
-        forSonographers={content.problem.forSonographers}
-        forClinics={content.problem.forClinics}
-        statCallout={content.problem.statCallout}
+          title={content.problem.title}
+          description={content.problem.description}
+          forStaff={content.problem.forStaff}
+          forClinics={content.problem.forClinics}
+          statCallout={content.problem.statCallout}
         />
       </div>
       
-      <HowItWorks steps={content.howItWorks} />
-      
-      <EvidenceGrid items={content.evidence} />
+      <HowItWorks 
+        title={content.howItWorks.title}
+        description={content.howItWorks.description}
+        steps={content.howItWorks.steps} 
+      />
 
       <div className="text-center my-12">
         <ShimmerButton href="#lead">Get early access</ShimmerButton>

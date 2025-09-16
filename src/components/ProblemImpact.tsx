@@ -4,12 +4,14 @@ import { motion } from 'framer-motion'
 import { AlertCircle, Users, TrendingDown } from 'lucide-react'
 
 interface ProblemImpactProps {
-  forSonographers: string[]
+  title: string
+  description: string
+  forStaff: string[]
   forClinics: string[]
   statCallout: string
 }
 
-export function ProblemImpact({ forSonographers, forClinics, statCallout }: ProblemImpactProps) {
+export function ProblemImpact({ title, description, forStaff, forClinics, statCallout }: ProblemImpactProps) {
   return (
     <section className="py-24 bg-slate-50">
       <div className="container mx-auto px-6">
@@ -22,10 +24,10 @@ export function ProblemImpact({ forSonographers, forClinics, statCallout }: Prob
             className="text-center mb-20"
           >
             <h2 className="text-5xl md:text-6xl font-light text-slate-800 mb-8 tracking-tight">
-              The Problem & Impact
+              {title}
             </h2>
             <p className="text-xl text-slate-600 max-w-4xl mx-auto font-light leading-relaxed">
-              Medical imaging work is physically demanding, and poor scheduling practices compound the risk of WRMSDs.
+              {description}
             </p>
           </motion.div>
 
@@ -45,7 +47,7 @@ export function ProblemImpact({ forSonographers, forClinics, statCallout }: Prob
                 <h3 className="text-3xl font-light text-slate-800 tracking-wide">For Imaging Staff</h3>
               </div>
               <ul className="space-y-6">
-                {forSonographers.map((point, index) => (
+                {forStaff.map((point, index) => (
                   <li key={index} className="flex items-start">
                     <div className="w-3 h-3 bg-red-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
                     <span className="text-slate-600 text-lg leading-relaxed">{point}</span>

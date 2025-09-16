@@ -11,7 +11,9 @@ import {
 import type React from 'react'
 
 interface HowItWorksProps {
-  steps: { title: string; text: string }[]
+  title: string
+  description: string
+  steps: { title: string; text: string; detail: string }[]
 }
 
 type IconComp = React.ComponentType<{ className?: string }>
@@ -24,7 +26,7 @@ const iconMap: Record<string, IconComp> = {
   'Track': FileText,
 }
 
-export function HowItWorks({ steps }: HowItWorksProps) {
+export function HowItWorks({ title, description, steps }: HowItWorksProps) {
   return (
     <section id="how" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -37,10 +39,10 @@ export function HowItWorks({ steps }: HowItWorksProps) {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              How It Works
+              {title}
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              SONOMIQ integrates seamlessly with your existing scheduler to provide intelligent WRMSD risk optimization.
+              {description}
             </p>
           </motion.div>
 
