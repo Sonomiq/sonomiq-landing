@@ -25,12 +25,6 @@ export function Hero({ title, subhead, primaryCta, secondaryCta, microproof }: H
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="mb-8">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-6">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
-                Medical Imaging Technology
-              </div>
-            </div>
             
             <h1 className="text-6xl md:text-8xl font-light text-slate-800 mb-8 tracking-tight">
               {title}
