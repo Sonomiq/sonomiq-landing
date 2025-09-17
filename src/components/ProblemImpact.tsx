@@ -23,7 +23,7 @@ interface ProblemImpactProps {
 
 export function ProblemImpact({ title, description, statistics, forStaff, forClinics, costImpact, statCallout }: ProblemImpactProps) {
   return (
-    <section className="py-24 bg-slate-50">
+    <section id="problem" className="py-24 bg-slate-50">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <motion.div
