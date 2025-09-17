@@ -25,22 +25,24 @@ interface ProblemImpactProps {
 export function ProblemImpact({ title, description, statistics, forStaff, forClinics, costImpact, statCallout }: ProblemImpactProps) {
   const { count: count90, ref: ref90 } = useCountUp({
     end: 90,
-    duration: 2000,
-    delay: 500,
-    suffix: '%'
+    duration: 2500,
+    delay: 300,
+    suffix: '%',
+    resetOnScroll: true
   })
 
   const { count: count20, ref: ref20 } = useCountUp({
     end: 20,
-    duration: 2000,
-    delay: 1000,
-    suffix: '%'
+    duration: 2500,
+    delay: 800,
+    suffix: '%',
+    resetOnScroll: true
   })
 
   const { count: countCost, ref: refCost } = useCountUp({
     end: 700000,
-    duration: 2500,
-    delay: 500,
+    duration: 3000,
+    delay: 1200,
     prefix: 'up to $',
     suffix: '+ USD',
     resetOnScroll: true
@@ -98,28 +100,28 @@ export function ProblemImpact({ title, description, statistics, forStaff, forCli
               {/* Statistics */}
               <div className="bg-red-50 border border-red-200 rounded-xl p-4">
                 <div className="grid grid-cols-2 gap-4 mb-3">
-                  <div className="text-center">
-                    <div 
-                      ref={ref90}
-                      className="text-2xl font-bold text-red-600 mb-1 transition-all duration-300"
-                    >
-                      {count90}
-                    </div>
-                    <p className="text-slate-700 text-xs">
-                      {statistics.primary}
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div 
-                      ref={ref20}
-                      className="text-2xl font-bold text-red-600 mb-1 transition-all duration-300"
-                    >
-                      {count20}
-                    </div>
-                    <p className="text-slate-700 text-xs">
-                      {statistics.secondary}
-                    </p>
-                  </div>
+                      <div className="text-center">
+                        <div 
+                          ref={ref90}
+                          className="text-2xl font-bold text-red-600 mb-1 transition-all duration-500 ease-out"
+                        >
+                          {count90}
+                        </div>
+                        <p className="text-slate-700 text-xs">
+                          {statistics.primary}
+                        </p>
+                      </div>
+                      <div className="text-center">
+                        <div 
+                          ref={ref20}
+                          className="text-2xl font-bold text-red-600 mb-1 transition-all duration-500 ease-out"
+                        >
+                          {count20}
+                        </div>
+                        <p className="text-slate-700 text-xs">
+                          {statistics.secondary}
+                        </p>
+                      </div>
                 </div>
                 <div className="text-center">
                   <a 
@@ -166,7 +168,7 @@ export function ProblemImpact({ title, description, statistics, forStaff, forCli
                 <div className="text-center">
                   <div 
                     ref={refCost}
-                    className="text-2xl font-bold text-red-600 mb-2 transition-all duration-300"
+                    className="text-2xl font-bold text-red-600 mb-2 transition-all duration-500 ease-out"
                   >
                     {countCost}
                   </div>

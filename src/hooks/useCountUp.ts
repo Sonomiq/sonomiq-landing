@@ -60,9 +60,9 @@ export function useCountUp({
         const elapsed = Date.now() - startTime
         const progress = Math.min(elapsed / duration, 1)
         
-        // Easing function for smooth animation
-        const easeOutCubic = 1 - Math.pow(1 - progress, 3)
-        const currentValue = startValue + (endValue - startValue) * easeOutCubic
+        // Enhanced easing function for ultra-smooth animation
+        const easeOutQuart = 1 - Math.pow(1 - progress, 4)
+        const currentValue = startValue + (endValue - startValue) * easeOutQuart
         
         setCount(Number(currentValue.toFixed(decimals)))
 
