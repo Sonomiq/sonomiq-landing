@@ -31,7 +31,11 @@ export function Header({ ctaHref }: HeaderProps) {
           : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-6 py-6">
+      {/* Gradient overlay for header readability when over video */}
+      {!isScrolled && (
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 via-slate-900/10 to-transparent pointer-events-none"></div>
+      )}
+      <div className="container mx-auto px-6 py-6 relative z-10">
         <div className="flex items-center justify-between">
           <Link href="/" className={`text-4xl font-light tracking-wide transition-colors ${
             isScrolled ? 'text-slate-800' : 'text-white'
