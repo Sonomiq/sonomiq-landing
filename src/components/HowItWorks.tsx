@@ -76,45 +76,6 @@ export function HowItWorks({ title, description, steps }: HowItWorksProps) {
               })}
             </div>
           </div>
-
-          {/* Process Flow Diagram */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="mt-16 bg-gray-50 p-8 rounded-lg"
-          >
-            <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">
-              Simple Integration Flow
-            </h3>
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-              <div className="bg-white p-4 rounded-lg shadow-sm text-center min-w-[120px]">
-                <div className="text-sm font-medium text-gray-600 mb-2">Your Scheduler</div>
-                <div className="w-12 h-12 bg-green-100 rounded-lg mx-auto flex items-center justify-center">
-                  <Database className="w-6 h-6 text-green-600" />
-                </div>
-              </div>
-              
-              <div className="text-gray-400 text-2xl">→</div>
-              
-              <div className="bg-white p-4 rounded-lg shadow-sm text-center min-w-[120px]">
-                <div className="text-sm font-medium text-gray-600 mb-2">SONOMIQ Add-on</div>
-                <div className="w-12 h-12 bg-blue-100 rounded-lg mx-auto flex items-center justify-center">
-                  <BarChart3 className="w-6 h-6 text-blue-600" />
-                </div>
-              </div>
-              
-              <div className="text-gray-400 text-2xl">→</div>
-              
-              <div className="bg-white p-4 rounded-lg shadow-sm text-center min-w-[120px]">
-                <div className="text-sm font-medium text-gray-600 mb-2">Smart Scheduling</div>
-                <div className="w-12 h-12 bg-yellow-100 rounded-lg mx-auto flex items-center justify-center">
-                  <Lightbulb className="w-6 h-6 text-yellow-600" />
-                </div>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
