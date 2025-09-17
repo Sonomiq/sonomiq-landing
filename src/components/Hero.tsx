@@ -45,6 +45,8 @@ export function Hero({ title, subhead, primaryCta, secondaryCta, microproof }: H
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/15 via-slate-800/10 to-blue-900/15"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-slate-900/10"></div>
         <div className="absolute inset-0 bg-black/5"></div>
+        {/* Stronger gradient at top for header readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900/20 to-transparent"></div>
       </div>
       
       <BackgroundBeams />
