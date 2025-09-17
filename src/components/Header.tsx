@@ -33,7 +33,7 @@ export function Header({ ctaHref }: HeaderProps) {
     >
       {/* Gradient overlay for header readability when over video */}
       {!isScrolled && (
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900/20 to-slate-900/5 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900/25 via-slate-900/15 via-slate-900/8 to-transparent pointer-events-none"></div>
       )}
       <div className="container mx-auto px-6 py-6 relative z-10">
         <div className="flex items-center justify-between">
