@@ -38,10 +38,10 @@ export function HowItWorks({ title, description, steps }: HowItWorksProps) {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-5xl md:text-6xl font-light text-slate-800 mb-6 tracking-tight">
               {title}
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 font-light">
               {description}
             </p>
           </motion.div>
