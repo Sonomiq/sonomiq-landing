@@ -34,15 +34,15 @@ export function ProblemImpact({ title, description, statistics, forStaff, forCli
   const { count: count20, ref: ref20 } = useCountUp({
     end: 20,
     duration: 2500,
-    delay: 800,
+    delay: 300,
     suffix: '%',
     resetOnScroll: true
   })
 
   const { count: countCost, ref: refCost } = useCountUp({
     end: 700000,
-    duration: 3000,
-    delay: 1200,
+    duration: 2500,
+    delay: 300,
     prefix: 'up to $',
     suffix: '+ USD',
     resetOnScroll: true
