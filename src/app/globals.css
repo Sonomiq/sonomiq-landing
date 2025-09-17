@@ -56,14 +56,24 @@
   }
 }
 
-/* Custom animations for reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
+    /* Smooth scrolling with header offset */
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 120px; /* Account for fixed header height */
+    }
+
+    /* Custom animations for reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      
+      html {
+        scroll-padding-top: 0;
+      }
+    }
