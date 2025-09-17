@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { AlertCircle, Users, TrendingDown } from 'lucide-react'
+import { useCountUp } from '@/hooks/useCountUp'
 
 interface ProblemImpactProps {
   title: string
@@ -22,6 +23,20 @@ interface ProblemImpactProps {
 }
 
 export function ProblemImpact({ title, description, statistics, forStaff, forClinics, costImpact, statCallout }: ProblemImpactProps) {
+  const { count: count90, ref: ref90 } = useCountUp({
+    end: 90,
+    duration: 2000,
+    delay: 500,
+    suffix: '%'
+  })
+
+  const { count: count20, ref: ref20 } = useCountUp({
+    end: 20,
+    duration: 2000,
+    delay: 1000,
+    suffix: '%'
+  })
+
   return (
     <section id="problem" className="py-24 bg-slate-50">
       <div className="container mx-auto px-6">
@@ -75,16 +90,22 @@ export function ProblemImpact({ title, description, statistics, forStaff, forCli
               <div className="bg-red-50 border border-red-200 rounded-xl p-4">
                 <div className="grid grid-cols-2 gap-4 mb-3">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-red-600 mb-1">
-                      90%
+                    <div 
+                      ref={ref90}
+                      className="text-2xl font-bold text-red-600 mb-1 transition-all duration-300"
+                    >
+                      {count90}
                     </div>
                     <p className="text-slate-700 text-xs">
                       {statistics.primary}
                     </p>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-red-600 mb-1">
-                      20%
+                    <div 
+                      ref={ref20}
+                      className="text-2xl font-bold text-red-600 mb-1 transition-all duration-300"
+                    >
+                      {count20}
                     </div>
                     <p className="text-slate-700 text-xs">
                       {statistics.secondary}
