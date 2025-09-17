@@ -55,14 +55,14 @@ export function Header({ ctaHref }: HeaderProps) {
               How it works
             </Link>
             <Link 
-              href="#evidence" 
+              href="#problem" 
               className={`transition-colors font-medium text-base tracking-wide ${
                 isScrolled 
                   ? 'text-slate-600 hover:text-slate-800' 
                   : 'text-white/90 hover:text-white'
               }`}
             >
-              Evidence
+              Problem
             </Link>
             <Link 
               href="#marketplaces" 

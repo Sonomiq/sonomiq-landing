@@ -71,8 +71,8 @@ export function Footer({ links, disclaimer }: FooterProps) {
                     </Link>
                   </li>
                   <li>
-                    <Link href="#evidence" className="text-slate-300 hover:text-white transition-colors text-lg font-light">
-                      Evidence
+                    <Link href="#problem" className="text-slate-300 hover:text-white transition-colors text-lg font-light">
+                      Problem
                     </Link>
                   </li>
                   <li>
