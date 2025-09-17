@@ -19,8 +19,9 @@ export function useCountUp({
   delay = 0,
   suffix = '',
   prefix = '',
-  decimals = 0
-}: UseCountUpOptions) {
+  decimals = 0,
+  resetOnScroll = false
+}: UseCountUpOptions & { resetOnScroll?: boolean }) {
   const [count, setCount] = useState(start)
   const [isVisible, setIsVisible] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
@@ -28,8 +29,13 @@ export function useCountUp({
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !isVisible) {
+        if (entry.isIntersecting) {
+          if (resetOnScroll) {
+            setCount(start) // Reset count when scrolling past
+          }
           setIsVisible(true)
+        } else if (resetOnScroll) {
+          setIsVisible(false) // Reset visibility state when out of view
         }
       },
       { threshold: 0.1 }
@@ -40,7 +46,7 @@ export function useCountUp({
     }
 
     return () => observer.disconnect()
-  }, [isVisible])
+  }, [isVisible, resetOnScroll, start])
 
   useEffect(() => {
     if (!isVisible) return

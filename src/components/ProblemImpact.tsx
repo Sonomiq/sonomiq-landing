@@ -37,6 +37,15 @@ export function ProblemImpact({ title, description, statistics, forStaff, forCli
     suffix: '%'
   })
 
+  const { count: countCost, ref: refCost } = useCountUp({
+    end: 700000,
+    duration: 2500,
+    delay: 500,
+    prefix: 'up to $',
+    suffix: '+ USD',
+    resetOnScroll: true
+  })
+
   return (
     <section id="problem" className="py-24 bg-slate-50">
       <div className="container mx-auto px-6">
@@ -155,8 +164,11 @@ export function ProblemImpact({ title, description, statistics, forStaff, forCli
               {/* Cost Impact */}
               <div className="bg-red-50 border border-red-200 rounded-xl p-4">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-red-600 mb-2">
-                    {costImpact.amount}
+                  <div 
+                    ref={refCost}
+                    className="text-2xl font-bold text-red-600 mb-2 transition-all duration-300"
+                  >
+                    {countCost}
                   </div>
                   <p className="text-slate-700 text-xs mb-3">
                     {costImpact.description}
