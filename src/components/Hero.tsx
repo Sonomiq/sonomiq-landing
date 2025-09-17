@@ -25,7 +25,19 @@ export function Hero({ title, subhead, primaryCta, secondaryCta, microproof }: H
           loop
           playsInline
           controls={false}
+          preload="auto"
+          disablePictureInPicture
+          disableRemotePlayback
           className="w-full h-full object-cover"
+          style={{ 
+            objectFit: 'cover',
+            width: '100%',
+            height: '100%',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            zIndex: 1
+          }}
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>

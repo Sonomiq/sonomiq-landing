@@ -30,17 +30,14 @@ export function Demo() {
             className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-100"
           >
             <div className="aspect-video w-full bg-slate-100">
-              <video
-                className="h-full w-full object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-                controls={false}
-              >
-                <source src="/hero-video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="SONOMIQ Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
           </motion.div>
         </div>
