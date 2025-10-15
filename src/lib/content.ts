@@ -78,12 +78,12 @@ export const content = {
     title: 'Works with Your Existing Systems',
     description: 'Seamlessly integrates with all major healthcare platforms.',
     platforms: [
-      { name: 'Epic Radiant', status: 'available' },
-      { name: 'Oracle Health (Cerner)', status: 'available' },
-      { name: 'Philips Enterprise Imaging', status: 'available' },
-      { name: 'Siemens Healthineers', status: 'available' },
-      { name: 'Allocate HealthRoster', status: 'available' },
-      { name: 'Humanforce', status: 'available' }
+      { name: 'Epic Radiant', status: 'available' as const },
+      { name: 'Oracle Health (Cerner)', status: 'available' as const },
+      { name: 'Philips Enterprise Imaging', status: 'available' as const },
+      { name: 'Siemens Healthineers', status: 'available' as const },
+      { name: 'Allocate HealthRoster', status: 'available' as const },
+      { name: 'Humanforce', status: 'available' as const }
     ]
   },
   caseStudies: {

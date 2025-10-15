@@ -71,7 +71,7 @@ export function BackgroundBeams() {
       animationFrameId = requestAnimationFrame(draw)
     }
 
-    draw()
+    draw(0)
 
     return () => {
       cancelAnimationFrame(animationFrameId)
