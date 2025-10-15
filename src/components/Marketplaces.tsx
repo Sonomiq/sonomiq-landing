@@ -91,11 +91,11 @@ export function Marketplaces({ items }: MarketplacesProps) {
             className="text-center bg-blue-50 p-8 rounded-lg"
           >
             <h3 className="text-2xl font-light text-gray-900 mb-4">
-              Don't see your platform?
+              Don&apos;t see your platform?
             </h3>
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-              We're constantly adding new integrations. Let us know which platform you use, 
-              and we'll prioritize it for development.
+              We&apos;re constantly adding new integrations. Let us know which platform you use, 
+              and we&apos;ll prioritize it for development.
             </p>
             <Button asChild size="lg">
               <a href="#lead">Notify me when my platform is ready</a>

@@ -129,7 +129,7 @@ export function LeadForm({ action }: LeadFormProps) {
           Thank you for your interest!
         </h3>
         <p className="text-gray-600 mb-6">
-          We'll be in touch soon with updates about SONOMIQ and your platform integration.
+          We&apos;ll be in touch soon with updates about SONOMIQ and your platform integration.
         </p>
         <Badge variant="default" className="text-sm">
           Early Access Request Submitted
