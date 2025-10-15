@@ -1,8 +1,13 @@
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { ProblemImpact } from '@/components/ProblemImpact'
+import { CompetitiveAdvantage } from '@/components/CompetitiveAdvantage'
+import { TrustIndicators } from '@/components/TrustIndicators'
+import { IntegrationShowcase } from '@/components/IntegrationShowcase'
 import { HowItWorks } from '@/components/HowItWorks'
 import { Demo } from '@/components/Demo'
+import { CaseStudies } from '@/components/CaseStudies'
+import { ROICalculator } from '@/components/ROICalculator'
 import { LogoMarquee } from '@/components/aceternity/LogoMarquee'
 import { GradientBorder } from '@/components/aceternity/GradientBorder'
 import { Testimonials } from '@/components/Testimonials'
@@ -36,6 +41,24 @@ export default function Home() {
         costImpact={content.problem.costImpact}
         statCallout={content.problem.statCallout}
       />
+
+      <CompetitiveAdvantage
+        title={content.competitive.title}
+        description={content.competitive.description}
+        advantages={content.competitive.advantages}
+      />
+
+      <TrustIndicators
+        title={content.trust.title}
+        badges={content.trust.badges}
+        stats={content.trust.stats}
+      />
+
+      <IntegrationShowcase
+        title={content.integrations.title}
+        description={content.integrations.description}
+        platforms={content.integrations.platforms}
+      />
       
       <HowItWorks 
         title={content.howItWorks.title}
@@ -44,6 +67,13 @@ export default function Home() {
       />
 
       <Demo />
+
+      <CaseStudies
+        title={content.caseStudies.title}
+        studies={content.caseStudies.studies}
+      />
+
+      <ROICalculator />
 
       <Testimonials />
       

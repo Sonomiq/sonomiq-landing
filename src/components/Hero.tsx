@@ -39,14 +39,21 @@ export function Hero({ title, subhead, primaryCta, secondaryCta, microproof }: H
             zIndex: 1
           }}
         >
-          <source src="/hero-video.mp4" type="video/mp4" />
+          <source src="/stock_video.mp4" type="video/mp4" />
         </video>
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/15 via-slate-800/10 to-blue-900/15"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-slate-900/10"></div>
-        <div className="absolute inset-0 bg-black/5"></div>
+        {/* Overlay for better text readability - extremely dark */}
+        <div className="absolute inset-0 bg-black/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-blue-900/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-slate-900/80"></div>
+        <div className="absolute inset-0 bg-black/70"></div>
         {/* Stronger gradient at top for header readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900/20 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/98 via-slate-900/80 to-transparent"></div>
+        {/* Additional dark overlay for maximum text contrast */}
+        <div className="absolute inset-0 bg-black/60"></div>
+        {/* Extra dark overlay for maximum darkness */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        {/* Final dark overlay to ensure maximum darkness */}
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
       
       <BackgroundBeams />
@@ -62,7 +69,7 @@ export function Hero({ title, subhead, primaryCta, secondaryCta, microproof }: H
               {title}
             </h1>
             
-            <p className="text-xl md:text-2xl text-white mb-12 max-w-4xl mx-auto leading-relaxed font-medium drop-shadow-xl" style={{ textShadow: '0 0 15px rgba(0,0,0,0.8), 0 0 30px rgba(0,0,0,0.6)' }}>
+            <p className="text-xl md:text-2xl text-white mb-12 max-w-4xl mx-auto leading-relaxed font-light drop-shadow-xl" style={{ textShadow: '0 0 15px rgba(0,0,0,0.8), 0 0 30px rgba(0,0,0,0.6)' }}>
               {subhead}
             </p>
             

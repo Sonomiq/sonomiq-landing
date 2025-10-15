@@ -52,7 +52,16 @@
     @apply border-gray-200;
   }
   body {
-    @apply bg-white text-gray-900;
+    @apply bg-white text-gray-900 font-light;
+  }
+  
+  /* Apply font-light to all text elements for consistency */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-light;
+  }
+  
+  p, span, div, a, button, input, textarea, label {
+    @apply font-light;
   }
 }
 

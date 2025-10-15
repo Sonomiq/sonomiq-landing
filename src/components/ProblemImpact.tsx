@@ -103,7 +103,7 @@ export function ProblemImpact({ title, description, statistics, forStaff, forCli
                       <div className="text-center">
                         <div 
                           ref={ref90}
-                          className="text-2xl font-bold text-red-600 mb-1 transition-all duration-500 ease-out"
+                          className="text-2xl font-light text-red-600 mb-1 transition-all duration-500 ease-out"
                         >
                           {count90}
                         </div>
@@ -114,7 +114,7 @@ export function ProblemImpact({ title, description, statistics, forStaff, forCli
                       <div className="text-center">
                         <div 
                           ref={ref20}
-                          className="text-2xl font-bold text-red-600 mb-1 transition-all duration-500 ease-out"
+                          className="text-2xl font-light text-red-600 mb-1 transition-all duration-500 ease-out"
                         >
                           {count20}
                         </div>
@@ -168,7 +168,7 @@ export function ProblemImpact({ title, description, statistics, forStaff, forCli
                 <div className="text-center">
                   <div 
                     ref={refCost}
-                    className="text-2xl font-bold text-red-600 mb-2 transition-all duration-500 ease-out"
+                    className="text-2xl font-light text-red-600 mb-2 transition-all duration-500 ease-out"
                   >
                     {countCost}
                   </div>

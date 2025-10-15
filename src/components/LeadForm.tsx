@@ -125,7 +125,7 @@ export function LeadForm({ action }: LeadFormProps) {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        <h3 className="text-2xl font-light text-gray-900 mb-4">
           Thank you for your interest!
         </h3>
         <p className="text-gray-600 mb-6">

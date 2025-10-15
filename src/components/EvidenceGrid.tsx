@@ -37,7 +37,7 @@ export function EvidenceGrid({ items }: EvidenceGridProps) {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6">
               Evidence-Based Strategies
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
@@ -79,7 +79,7 @@ export function EvidenceGrid({ items }: EvidenceGridProps) {
             className="mt-16 text-center"
           >
             <div className="bg-blue-600 text-white p-8 rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">
+              <h3 className="text-2xl font-light mb-4">
                 Research-Backed Approach
               </h3>
               <p className="text-lg max-w-3xl mx-auto">

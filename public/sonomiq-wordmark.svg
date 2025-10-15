@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="7200" height="2400" viewBox="0 0 7200 2400" role="img" aria-label="SONOMIQ wordmark">
+  <defs>
+    <style>
+      .ink { fill: #28303D; }
+      .bg { fill: none; }
+    </style>
+  </defs>
+  <!-- Optional transparent background for safe export -->
+  <rect class="bg" x="0" y="0" width="7200" height="2400" />
+  <!-- Text-based wordmark: clean, light typography matching original design -->
+  <text x="400" y="1500" class="ink" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="1400" font-weight="300" letter-spacing="-16">SONOMIQ</text>
+</svg>
+
+

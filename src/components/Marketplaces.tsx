@@ -29,7 +29,7 @@ export function Marketplaces({ items }: MarketplacesProps) {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6">
               Platform Integrations
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
@@ -90,7 +90,7 @@ export function Marketplaces({ items }: MarketplacesProps) {
             viewport={{ once: true }}
             className="text-center bg-blue-50 p-8 rounded-lg"
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-light text-gray-900 mb-4">
               Don't see your platform?
             </h3>
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">

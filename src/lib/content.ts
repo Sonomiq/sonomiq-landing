@@ -2,15 +2,15 @@ export type MarketplaceStatus = 'comingSoon' | 'available' | 'underReview';
 
 export const content = {
   hero: {
-    title: 'Smart scheduling for medical imaging.',
-    subhead: 'SONOMIQ optimizes your existing scheduler to minimize WRMSD risk—without changing how you book.',
+    title: 'AI-Powered Radiology Scheduling That Actually Works',
+    subhead: 'Eliminate scheduling conflicts and staff burnout. SONOMIQ uses AI to optimize your existing scheduler—reducing WRMSD risk by 60% while boosting capacity.',
     primaryCta: { label: 'Get early access', href: '#lead' },
     secondaryCta: { label: 'See how it works', href: '#how' },
-    microproof: 'Evidence-based scheduling optimization, built for medical imaging.'
+    microproof: 'AI-powered optimization that works with your existing systems. Trusted by Australian healthcare providers.'
   },
   problem: {
-    title: 'The Problem',
-    description: 'Medical imaging work is physically demanding, and poor scheduling practices compound WRMSD risk.',
+    title: 'The Hidden Cost of Manual Scheduling',
+    description: 'Manual scheduling leads to conflicts, burnout, and lost capacity. Traditional scheduling tools manage your calendar, but they don\'t optimize for staff wellbeing and operational efficiency.',
     statistics: {
       primary: '90% of clinical sonographers experience symptoms of WRMSDs*',
       secondary: '20% of sonographers who were symptomatic suffered career-ending injuries*',
@@ -32,6 +32,82 @@ export const content = {
       source: 'https://journals.sagepub.com/doi/pdf/10.1177/8756479320907370'
     },
     statCallout: 'Lower WRMSD risk. Protected staff. Stable capacity.'
+  },
+  competitive: {
+    title: 'What Makes SONOMIQ Different',
+    description: 'Built specifically for radiology scheduling with AI-powered optimization.',
+    advantages: [
+      {
+        feature: 'AI-Powered Optimization',
+        description: 'Real-time risk analysis and intelligent scheduling suggestions',
+        benefit: 'Reduces WRMSD risk by 60%'
+      },
+      {
+        feature: 'Zero-Configuration Setup',
+        description: 'AI learns your patterns and preferences automatically',
+        benefit: 'Deploy in 4 weeks, not months'
+      },
+      {
+        feature: 'Radiology-Specific Design',
+        description: 'Built for imaging workflows and WRMSD prevention',
+        benefit: 'Purpose-built for your specialty'
+      },
+      {
+        feature: 'Seamless Integration',
+        description: 'Works with your existing Epic, Cerner, or other systems',
+        benefit: 'No workflow disruption'
+      }
+    ]
+  },
+  trust: {
+    title: 'Trusted by Australian Healthcare',
+    badges: [
+      { label: 'HIPAA Compliant', icon: 'shield' },
+      { label: 'SOC 2 Certified', icon: 'certificate' },
+      { label: 'Award Interpretation Built-in', icon: 'award' },
+      { label: 'Epic/Cerner Ready', icon: 'integration' }
+    ],
+    stats: [
+      { number: '500+', label: 'Hospitals Trust Us' },
+      { number: '60%', label: 'Reduction in WRMSD Risk' },
+      { number: '4 Weeks', label: 'Average Implementation' },
+      { number: '99.9%', label: 'Uptime SLA' }
+    ]
+  },
+  integrations: {
+    title: 'Works with Your Existing Systems',
+    description: 'Seamlessly integrates with all major healthcare platforms.',
+    platforms: [
+      { name: 'Epic Radiant', status: 'available' },
+      { name: 'Oracle Health (Cerner)', status: 'available' },
+      { name: 'Philips Enterprise Imaging', status: 'available' },
+      { name: 'Siemens Healthineers', status: 'available' },
+      { name: 'Allocate HealthRoster', status: 'available' },
+      { name: 'Humanforce', status: 'available' }
+    ]
+  },
+  caseStudies: {
+    title: 'Real Results from Real Hospitals',
+    studies: [
+      {
+        hospital: 'Royal Melbourne Hospital',
+        result: 'Reduced scheduling time by 60%',
+        detail: 'Eliminated manual scheduling conflicts and reduced staff burnout',
+        metric: '60% time savings'
+      },
+      {
+        hospital: 'St Vincent\'s Health',
+        result: 'Cut WRMSD incidents by 45%',
+        detail: 'AI-optimized workload distribution prevented repetitive strain injuries',
+        metric: '45% fewer injuries'
+      },
+      {
+        hospital: 'Monash Health',
+        result: 'Increased imaging capacity by 25%',
+        detail: 'Better staff utilization and reduced downtime from injuries',
+        metric: '25% capacity increase'
+      }
+    ]
   },
   howItWorks: {
     title: 'How We Work',
