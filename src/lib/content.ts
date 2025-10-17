@@ -3,14 +3,14 @@ export type MarketplaceStatus = 'comingSoon' | 'available' | 'underReview';
 export const content = {
   hero: {
     title: 'AI-Powered Radiology Scheduling That Actually Works',
-    subhead: 'Eliminate scheduling conflicts and staff burnout. SONOMIQ uses AI to optimize your existing scheduler—reducing WRMSD risk by 60% while boosting capacity.',
+    subhead: 'Eliminate scheduling conflicts and staff burnout. SONOMIQ uses AI to optimise your existing scheduler—reducing WRMSD risk by 60% while boosting capacity.',
     primaryCta: { label: 'Get early access', href: '#lead' },
     secondaryCta: { label: 'See how it works', href: '#how' },
-    microproof: 'AI-powered optimization that works with your existing systems. Trusted by Australian healthcare providers.'
+    microproof: 'AI-powered optimisation that works with your existing systems. Trusted by Australian healthcare providers.'
   },
   problem: {
     title: 'The Hidden Cost of Manual Scheduling',
-    description: 'Manual scheduling leads to conflicts, burnout, and lost capacity. Traditional scheduling tools manage your calendar, but they don\'t optimize for staff wellbeing and operational efficiency.',
+    description: 'Manual scheduling leads to conflicts, burnout, and lost capacity. Traditional scheduling tools manage your calendar, but they don\'t optimise for staff wellbeing and operational efficiency.',
     statistics: {
       primary: '90% of clinical sonographers experience symptoms of WRMSDs*',
       secondary: '20% of sonographers who were symptomatic suffered career-ending injuries*',
@@ -35,7 +35,7 @@ export const content = {
   },
   competitive: {
     title: 'What Makes SONOMIQ Different',
-    description: 'Built specifically for radiology scheduling with AI-powered optimization.',
+    description: 'Built specifically for radiology scheduling with AI-powered optimisation.',
     advantages: [
       {
         feature: 'AI-Powered Optimization',
@@ -60,19 +60,9 @@ export const content = {
     ]
   },
   trust: {
-    title: 'Trusted by Australian Healthcare',
-    badges: [
-      { label: 'HIPAA Compliant', icon: 'shield' },
-      { label: 'SOC 2 Certified', icon: 'certificate' },
-      { label: 'Award Interpretation Built-in', icon: 'award' },
-      { label: 'Epic/Cerner Ready', icon: 'integration' }
-    ],
-    stats: [
-      { number: '500+', label: 'Hospitals Trust Us' },
-      { number: '60%', label: 'Reduction in WRMSD Risk' },
-      { number: '4 Weeks', label: 'Average Implementation' },
-      { number: '99.9%', label: 'Uptime SLA' }
-    ]
+    title: 'Why teams are interested',
+    badges: [],
+    stats: []
   },
   integrations: {
     title: 'Works with Your Existing Systems',
@@ -98,7 +88,7 @@ export const content = {
       {
         hospital: 'St Vincent\'s Health',
         result: 'Cut WRMSD incidents by 45%',
-        detail: 'AI-optimized workload distribution prevented repetitive strain injuries',
+        detail: 'AI-optimised workload distribution prevented repetitive strain injuries',
         metric: '45% fewer injuries'
       },
       {
@@ -111,7 +101,7 @@ export const content = {
   },
   howItWorks: {
     title: 'How We Work',
-    description: 'SONOMIQ integrates seamlessly with your existing scheduler to provide intelligent WRMSD risk optimization.',
+    description: 'SONOMIQ integrates seamlessly with your existing scheduler to provide intelligent WRMSD risk optimisation.',
     steps: [
       { 
         title: 'Connect', 
@@ -120,12 +110,12 @@ export const content = {
       },
       { 
         title: 'Analyze', 
-        text: 'Our add-on analyzes your imaging schedules and scores WRMSD risk for each staff member.',
+        text: 'Our add-on analyses your imaging schedules and scores WRMSD risk for each staff member.',
         detail: 'Real-time analysis of exam types, durations, and staff assignments to identify high-risk patterns.'
       },
       { 
         title: 'Suggest', 
-        text: 'Get real-time optimization suggestions: rotations, micro-breaks, distribution, caps, and risk flags.',
+        text: 'Get real-time optimisation suggestions: rotations, micro-breaks, distribution, caps, and risk flags.',
         detail: 'Intelligent recommendations for task rotation, recovery periods, workload distribution, and exposure limits.'
       },
       { 
@@ -135,7 +125,7 @@ export const content = {
       },
       { 
         title: 'Track', 
-        text: 'Every optimization and override is logged for compliance and continuous improvement.',
+        text: 'Every optimisation and override is logged for compliance and continuous improvement.',
         detail: 'Complete audit trail for regulatory compliance and ongoing optimization of scheduling rules.'
       }
     ]
@@ -150,13 +140,13 @@ export const content = {
     { name: 'QGenda Integrated Partners', blurb: 'Direct healthcare integrations.', status: 'comingSoon' as MarketplaceStatus, linkLabel: 'QGenda Partners' }
   ],
   faq: [
-    { q: 'Does SONOMIQ replace our scheduler?', a: 'No. It\'s an add-on that advises your existing scheduler with WRMSD risk analysis and optimization suggestions.' },
+    { q: 'Does SONOMIQ replace our scheduler?', a: 'No. It\'s an add-on that advises your existing scheduler with WRMSD risk analysis and optimisation suggestions.' },
     { q: 'Will this slow down booking?', a: 'No. Suggestions appear inline; apply with one click. Overrides are supported with automatic mitigations.' },
     { q: 'What data do you need?', a: 'Imaging exam code/type, duration, staff/room availability, and optional constraints. No patient PHI is required.' },
     { q: 'Can we tune the rules?', a: 'Yes. Exposure limits, recovery periods, and rotation preferences are configurable by site.' }
   ],
   cta: {
-    title: 'Add intelligent scheduling optimization to your existing system.',
+    title: 'Add intelligent scheduling optimisation to your existing system.',
     primary: { label: 'Request early access', href: '#lead' },
     secondary: { label: 'Platform compatibility', href: '#marketplaces' }
   },

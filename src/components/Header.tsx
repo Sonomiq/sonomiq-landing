@@ -57,7 +57,7 @@ export function Header({ ctaHref }: HeaderProps) {
             <div className="flex items-center justify-between">
               <Link href="/" className="flex items-start -ml-4" aria-label="SONOMIQ home">
                 <Image
-                  src={isScrolled ? '/sonomiq-wordmark.svg?v=8' : '/sonomiq-wordmark-white.svg?v=8'}
+                  src={isScrolled ? '/sonomiq-wordmark.svg' : '/sonomiq-wordmark-white.svg'}
                   alt="SONOMIQ"
                   width={420}
                   height={70}
@@ -87,16 +87,7 @@ export function Header({ ctaHref }: HeaderProps) {
                 >
                   Problem
                 </Link>
-                <Link 
-                  href="#marketplaces" 
-                  className={`transition-colors font-light text-sm tracking-wide hover:scale-105 ${
-                    isScrolled 
-                      ? 'text-slate-600 hover:text-slate-800' 
-                      : 'text-white/90 hover:text-white'
-                  }`}
-                >
-                  Integrations
-                </Link>
+                {/* Integrations link removed */}
                 <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-light text-sm shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
                   <Link href={ctaHref}>Get early access</Link>
                 </Button>

@@ -15,10 +15,10 @@ export function Demo() {
             className="mb-12"
           >
             <h2 className="text-5xl md:text-6xl font-light text-slate-800 mb-6 tracking-tight">
-              Watch the Demo
+              Demo
             </h2>
             <p className="text-xl text-slate-600 font-light">
-              See how SONOMIQ optimizes imaging schedules to minimize WRMSD risk.
+              See SONOMIQ in action.
             </p>
           </motion.div>
 
@@ -32,7 +32,7 @@ export function Demo() {
             <div className="aspect-video w-full bg-slate-100">
               <iframe
                 className="h-full w-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                src="https://www.youtube.com/embed/dlE5VJHwaoc"
                 title="SONOMIQ Demo"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
